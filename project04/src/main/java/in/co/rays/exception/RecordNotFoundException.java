@@ -1,5 +1,12 @@
 package in.co.rays.exception;
 
-public class RecordNotFoundException {
+public class RecordNotFoundException extends Exception {
+	
+	public RecordNotFoundException(String msg) {
+		super(msg);
+
+	}
 
 }
+
+

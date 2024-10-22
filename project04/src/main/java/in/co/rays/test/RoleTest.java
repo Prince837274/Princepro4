@@ -13,11 +13,11 @@ public class RoleTest {
 	public static void main(String[] args)throws Exception {
 		
 		testfindByPk();
-		//testUpdate();
+	//testUpdate();
 		//testSearch();
-		// testAdd();
+		//testAdd();
 		// testDelete();
-		testfindByName();
+		//testfindByName();
 	}
 
 	private static void testfindByName() throws Exception {
@@ -64,10 +64,10 @@ public class RoleTest {
             
 		RoleBean  bean = new RoleBean();
 		
-		bean.setName("admin");
-		bean.setDescription("admin");
-		bean.setCreatedBy("admin@gmail.com");
-		bean.setModifiedBy("admin");
+		bean.setName("shubham");
+		bean.setDescription("rays technologies");
+		bean.setCreatedBy("shubham@gmail.com");
+		bean.setModifiedBy("shubham");
 		bean.setCreatedDatetime(new Timestamp(new Date().getTime()));
 		bean.setModifiedDatetime(new Timestamp(new Date().getTime()));
 		
@@ -80,12 +80,13 @@ public class RoleTest {
 			
 			RoleBean bean = new RoleBean();
 			 
-			bean.setName("admin");
-			bean.setDescription("pp");
+			bean.setName("prince");
+			bean.setDescription("jadu");
 			bean.setCreatedBy("admin@gmail.com");
 			bean.setModifiedBy("qwyqh");
 			bean.setCreatedDatetime(new Timestamp(new Date().getTime()));
 			bean.setModifiedDatetime(new Timestamp(new Date().getTime()));
+			bean.setId(2);
 			
 			model.update(bean);
 		}

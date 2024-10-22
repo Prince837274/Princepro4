@@ -6,14 +6,16 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import in.co.rays.bean.RoleBean;
 import in.co.rays.bean.UserBean;
+import in.co.rays.model.RoleModel;
 import in.co.rays.model.UserModel;
 
 public class TestUser {
-	
-	public static void main(String[] args) {
 
-		// testAdd();
+	public static void main(String[] args) throws Exception {
+
+		testAdd();
 		// testUpdate();
 		// testDelete();
 		// testFindByPk();
@@ -137,7 +139,7 @@ public class TestUser {
 		
 		bean.setFirstName("anurag");
 		
-		List list = model.search(bean, 0, 1);
+		List list = model.search(bean, 0, 5);
 		
 		Iterator it = list.iterator();
 		
@@ -163,5 +165,3 @@ public class TestUser {
 		
 	}
 }
-
-

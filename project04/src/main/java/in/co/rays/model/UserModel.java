@@ -5,8 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
-import in.co.rays.bean.RoleBean;
 import in.co.rays.bean.UserBean;
 import in.co.rays.util.JDBCDataSource;
 
@@ -92,7 +90,7 @@ public class UserModel {
 
 		Connection conn = JDBCDataSource.getConnection();
 
-		PreparedStatement pstmt = conn.prepareStatement("DELETE FROM st_user WHERE id =?");
+		PreparedStatement pstmt = conn.prepareStatement("Delete from st_user where id =?");
 		pstmt.setLong(1, bean.getId());
 		
 		int i = pstmt.executeUpdate();
@@ -108,7 +106,7 @@ public class UserModel {
 
 		
 		Connection conn = JDBCDataSource.getConnection();
-		PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM st_user WHERE ID=?");
+		PreparedStatement pstmt = conn.prepareStatement("select * from st_user where id=?");
 		pstmt.setLong(1, id);
 		ResultSet rs = pstmt.executeQuery();
 
@@ -140,7 +138,7 @@ public class UserModel {
 
 
 		Connection conn = JDBCDataSource.getConnection();
-		PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM st_user WHERE login =?");
+		PreparedStatement pstmt = conn.prepareStatement("select * from st_user where login =?");
 		pstmt.setString(1, login);
 		ResultSet rs = pstmt.executeQuery();
 
@@ -198,6 +196,9 @@ public class UserModel {
 		}
 		JDBCDataSource.closeConnection(conn);
 		return bean;
+	}
+	public List list() throws Exception {
+		return search(null, 0, 0);
 	}
 
 	public List search(UserBean bean, int pageNo, int pageSize) throws Exception {

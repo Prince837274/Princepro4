@@ -15,12 +15,6 @@ public class UserBean extends BaseBean {
 	private long roleId;
 	private String gender;
 	
-	
-	
-
-
-
-	
 		
 	
 	public String getFirstName() {
@@ -77,6 +71,19 @@ public class UserBean extends BaseBean {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	
+	
+	
+	public String getKey() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public String getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 	
 
 }
